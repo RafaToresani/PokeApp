@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap');
+
+  html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+  }
+
+  *, *:after, *:before {
+      box-sizing: inherit;
+      font-family: 'Baloo 2', sans-serif;
+  }
+
+  body {
+      margin: 0;
+      background-color: var(--gray);
+      background-color: var(--bg1);
+  }
+
+  :root {
+      --bug: #729f3f;
+      --dragon: #53a4cf;
+      --fairy: #fdb9e9;
+      --fire: #fd7d24;
+      --ghost: #7b62a3;
+      --ground: #f7de38;
+      --normal: #a4acaf;
+      --psychic: #f366b9;
+      --steel: #616161;
+      --dark: #707070;
+      --electric: #eed535;
+      --fight: #d56723;
+      --flying: #3dc7ef;
+      --grass: #9bcc50;
+      --ice: #51c4e7;
+      --poison: #b97fc9;
+      --rock: #a38c21;
+      --water: #4592c4;
+
+      --bg1: #EBEBEB;
+      --bg2: #E0E0E0;
+      --bg3: #B8B8B8;
+
+      --shadow-color: 0deg 0% 58%;
+      --shadow-elevation-low:
+          0.8px 0.7px 1.2px hsl(var(--shadow-color) / 0.34),
+          1.3px 1.2px 2px -1.2px hsl(var(--shadow-color) / 0.34),
+          3.1px 2.8px 4.7px -2.5px hsl(var(--shadow-color) / 0.34);
+      --shadow-elevation-medium:
+          0.8px 0.7px 1.2px hsl(var(--shadow-color) / 0.36),
+          2.6px 2.3px 3.9px -0.8px hsl(var(--shadow-color) / 0.36),
+          6.5px 5.8px 9.8px -1.7px hsl(var(--shadow-color) / 0.36),
+          15.7px 14.1px 23.7px -2.5px hsl(var(--shadow-color) / 0.36);
+      --shadow-elevation-high:
+          0.8px 0.7px 1.2px hsl(var(--shadow-color) / 0.34),
+          4.6px 4.1px 6.9px -0.4px hsl(var(--shadow-color) / 0.34),
+          8.6px 7.7px 13px -0.7px hsl(var(--shadow-color) / 0.34),
+          14.1px 12.6px 21.3px -1.1px hsl(var(--shadow-color) / 0.34),
+          22.5px 20.2px 34px -1.4px hsl(var(--shadow-color) / 0.34),
+          35.1px 31.6px 53.1px -1.8px hsl(var(--shadow-color) / 0.34),
+          53.4px 48px 80.8px -2.1px hsl(var(--shadow-color) / 0.34),
+          78.7px 70.7px 119px -2.5px hsl(var(--shadow-color) / 0.34);
+
+  }
+
+  .bug {
+      background-color: var(--bug);
+      color: white;
+  }
+
+  .dragon {
+      background-color: var(--dragon);
+      color: var(--fire);
+  }
+
+  .fairy {
+      background-color: var(--fairy);
+  }
+
+  .fire {
+      background-color: var(--fire);
+      color: white;
+  }
+
+  .ghost {
+      background-color: var(--ghost);
+      color: white;
+  }
+
+  .ground {
+      background-color: var(--ground);
+  }
+
+  .normal {
+      background-color: var(--normal);
+  }
+
+  .psychic {
+      background-color: var(--psychic);
+      color: white;
+  }
+
+  .steel {
+      background-color: var(--steel);
+      color: white;
+  }
+
+  .dark {
+      background-color: var(--dark);
+      color: white;
+  }
+
+  .rock {
+      background-color: var(--rock);
+      color: white;
+  }
+
+  .electric {
+      background-color: var(--electric);
+  }
+
+  .fighting {
+      background-color: var(--fight);
+      color: white;
+  }
+
+  .flying {
+      background-color: var(--flying);
+      color: white;
+  }
+
+  .ice {
+      background-color: var(--ice);
+  }
+
+  .poison {
+      background-color: var(--poison);
+      color: white;
+  }
+
+  .water {
+      background-color: var(--water);
+      color: white;
+  }
+
+  .grass {
+      background-color: var(--grass);
+      color: black;
+  }

@@ -1,0 +1,23 @@
+/* =========================== Busqueda ===========================*/
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    gap: 5rem;
+}
+
+form input[type="text"]{
+    height: 5rem;
+    width: 50%;
+    border: none;
+    border-radius: 5rem;
+    font-size: 3rem;
+    outline: none;
+    text-indent: 2rem;
+}
+
+form input[type="text"]:hover{
+    border: 0.2rem solid var(--bg3);
+}

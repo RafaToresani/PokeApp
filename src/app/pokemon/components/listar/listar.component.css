@@ -1,0 +1,82 @@
+/* =========================== Grid pokemons ===========================*/
+.listaPokemons{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+@media (min-width: 600px){
+    .listaPokemons{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 900px){
+    .listaPokemons{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1600px){
+    .listaPokemons{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* =========================== Cargar más ===========================*/
+.cargarMas{
+    margin: 2rem auto;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =========================== Carta ===========================*/
+
+
+.cartaPokemon{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg2);
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+.cartaPokemon img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.cartaPokemon .info{
+    padding: 0 0 2rem 2rem;
+    background-color: var(--bg3);
+}
+
+.cartaPokemon h3{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+.cartaPokemon .idPokemon{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cartaPokemon .tipos{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cartaPokemon .tipos span{
+    padding: 0 3rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}

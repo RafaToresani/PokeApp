@@ -1,0 +1,28 @@
+
+<section class="listaPokemons">
+  <div class="cartaPokemon" *ngFor="let item of listaPokemons">
+    <img
+      *ngIf="item?.sprites?.front_default"
+      src="{{ item.sprites.front_default }}"
+      alt=""
+      (click)="redirectToPokemon(item.name)"
+    />
+
+    <div class="info">
+      <p class="idPokemon">N.° {{ item.id }}</p>
+      <h3>{{ item.name.toUpperCase() }}</h3>
+      <p class="tipos">
+        <span [ngClass]="item.types[0].type.name">{{
+          item.types[0].type.name.toUpperCase()
+        }}</span>
+        <span *ngIf="item.types[1]" [ngClass]="item.types[1].type.name">{{
+          item.types[1].type.name.toUpperCase()
+        }}</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="cargarMas">
+  <a (click)="cargarMas()">Cargar mas.</a>
+</div>
