@@ -12,7 +12,6 @@
 
   body {
       margin: 0;
-      background-color: var(--gray);
       background-color: var(--bg1);
   }
 
@@ -39,6 +38,11 @@
       --bg1: #EBEBEB;
       --bg2: #E0E0E0;
       --bg3: #B8B8B8;
+      --carbon: #233D4D;
+      --calabaza: #FE7F2D;
+      --rayo: #FCCA46;
+      --celeste: #BCF4F5;
+      --menta: #B4EBCA;
 
       --shadow-color: 0deg 0% 58%;
       --shadow-elevation-low:

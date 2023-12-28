@@ -3,7 +3,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     gap: 3rem;
 }
@@ -11,16 +11,19 @@
 @media (min-width: 600px){
     .listaPokemons{
         grid-template-columns: repeat(2, 1fr);
+        width: 60%;
     }
 }
 @media (min-width: 900px){
     .listaPokemons{
         grid-template-columns: repeat(3, 1fr);
+        width: 60%;
     }
 }
 @media (min-width: 1600px){
     .listaPokemons{
         grid-template-columns: repeat(4, 1fr);
+        width: 60%;
     }
 }
 
@@ -44,6 +47,17 @@
     margin: 0 auto;
     background-color: var(--bg2);
     box-shadow: var(--shadow-elevation-medium);
+}
+
+@media(min-width: 1300px){
+    .cartaPokemon{
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cartaPokemon:hover{
+        transform: translateY(-2rem);
+        
+    }
 }
 
 .cartaPokemon img{
