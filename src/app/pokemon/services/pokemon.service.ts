@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { environments } from '../../../environments/environments';
 import { INavegacionPokemon, IPokemon } from '../interfaces/interfaces';
 import { Observable, of, tap } from 'rxjs';
+import { IEspecie } from '../interfaces/pkEspecieInterface';
+import { IEvolutionChain } from '../interfaces/pkEvolutionInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,8 @@ import { Observable, of, tap } from 'rxjs';
 export class PokemonService {
 
   baseUrl:string = environments.baseUrl;
-  pokemonEmitter = new EventEmitter<IPokemon>;
+  
+  
 
   constructor(private http: HttpClient, private route: Router) {
 
@@ -47,7 +50,12 @@ export class PokemonService {
   }
 
 
+  getPokemonSpecie(url:string): Observable<IEspecie | any>{
+    return this.http.get(url);
+  }
 
-
+  getPokemonEvolutionChain(url:string): Observable<IEvolutionChain | any>{
+    return this.http.get(url);
+  }
   
 }

@@ -1,2 +1,70 @@
-<h3>{{pokemon.name}}</h3>
-<img src="{{pokemon.sprites.front_default}}" alt="">
+@defer (when pokemon !== undefined) {
+<main>
+  <article class="dataPokemon">
+    <h1>{{ pokemon.name.toUpperCase() }}</h1>
+    <div class="imgPokemon">
+      <img src="{{ pokemon.sprites.other.home.front_default }}" alt="" />
+      <p class="tipos">
+        <span [ngClass]="pokemon.types[0].type.name">{{
+          pokemon.types[0].type.name.toUpperCase()
+        }}</span>
+        <span *ngIf="pokemon.types[1]" [ngClass]="pokemon.types[1].type.name">{{
+          pokemon.types[1].type.name.toUpperCase()
+        }}</span>
+      </p>
+    </div>
+
+    <div class="estadisticas">
+      <h2>BASE STATS</h2>
+      <div *ngFor="let item of pokemon.stats">
+        <div class="stat" >
+          <span class="statName" *ngIf="item.stat.name == 'hp'">HP: </span>
+          <span class="statName" *ngIf="item.stat.name == 'attack'">ATK: </span>
+          <span class="statName" *ngIf="item.stat.name == 'defense'">DEF: </span>
+          <span class="statName" *ngIf="item.stat.name == 'special-attack'">SPE. ATK: </span>
+          <span class="statName" *ngIf="item.stat.name == 'special-defense'">SPE. DEF: </span>
+          <span class="statName" *ngIf="item.stat.name == 'speed'">SPEED: </span>
+          <div class="progress">
+            <div class="progress-bar" [ngStyle]="{ 'width.%': (item.base_stat*100)/255 }">
+            </div>
+          </div>
+          <span class="statValue">{{item.base_stat}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="habilidades">
+      <h2>ABILITIES</h2>
+      <div class="hab" *ngFor="let item of pokemon.abilities">
+        <p [ngClass]="{'hiddenHab': item.is_hidden}">
+          {{ item.ability.name.toUpperCase() }}
+        </p>
+      </div>
+    </div>
+
+    <div class="movimientos">
+      <h2>MOVES</h2>
+      <div [ngClass]="{'ocultar': isToggleActive}" id="moveList">
+        <div class="move" *ngFor="let item of pokemon.moves">
+          <span>{{item.move.name.toUpperCase()}}</span>
+        </div>
+      </div>
+      <button (click)="toggleClass()">
+        <span *ngIf="isToggleActive === true">MORE</span>
+        <span *ngIf="isToggleActive === false">LESS</span>
+      </button>
+    </div>
+
+    <div class="evoluciones">
+
+    </div>
+  </article>
+</main>
+
+} @placeholder {
+<span>Placeholder</span>
+} @error {
+<span>Error</span>
+} @loading(minimum 1s) {
+<span>Loading...</span>
+}

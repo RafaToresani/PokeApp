@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ListarComponent {
 
-  listaNavegacion: INavegacionPokemon[] | any = [];
+  listaNavegacion: INavegacionPokemon[] = [];
   listaPokemons: IPokemon[]=[];
 
   numeroPagina: number = 1;
@@ -54,33 +54,21 @@ export class ListarComponent {
     this.router.navigate([`/pokemon/${value}`]);
   }
 
-  cargarListaPokemons(){
-    if(Array.isArray(this.listaNavegacion)){
-      this.listaNavegacion.forEach( (pokemon) => {
+  cargarListaPokemons() {
+    if (Array.isArray(this.listaNavegacion)) {
+      this.listaNavegacion.forEach((pokemon) => {
         this.pokemonService.getPokemon(pokemon.name).subscribe({
           next: (pokemon) => {
-            this.listaPokemons.push(pokemon);
-            console.log(pokemon);
+            if (pokemon) {
+              this.listaPokemons.push(pokemon);
+              console.log(pokemon);
+            }
           },
           error: (err) => {
             alert(err);
           }
-        })
-      } )
+        });
+      });
     }
   }
-
-/*funcion(pokemonId:string){
-    this.pokemonService.getPokemon(pokemonId).subscribe(
-      {
-        next: (pokemon) => {
-          console.log(pokemon);
-          this.pokemon=pokemon;
-        },
-        error: (err) => {
-          alert('El pokemon buscado no existe.')
-        }
-      }
-    )
-  }*/
 }

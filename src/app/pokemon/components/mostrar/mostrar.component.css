@@ -1,0 +1,187 @@
+/* =========================== Main ===========================*/
+.dataPokemon{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.dataPokemon h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0;
+}
+/* =========================== Carta ===========================*/
+.imgPokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg2);
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+
+.imgPokemon img{
+    height: 35rem;
+    width: 100;
+    object-fit: cover;
+    display: block;
+}
+
+.imgPokemon .tipos{
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.imgPokemon .tipos span{
+    padding: 0 3rem;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+/* =========================== Estadisticas ===========================*/
+.estadisticas{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 95%;
+    margin: 0 auto;
+    background-color: var(--bg2);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.estadisticas .stat{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    font-size: 1.7rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.statName{
+    grid-column: 1 / 3;
+    padding-left: 1rem;
+}
+
+.progress {
+    grid-column: 3 / 8;
+    height: 2rem;
+    width: 100%;
+    border: 2px solid var(--rayo);
+    background-color: var(--bg1);
+    border-radius: 1rem;
+}
+
+ 
+.progress-bar {
+    height: 100%;
+    background: var(--rayo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.statValue{
+    grid-column: 8 / 9;
+    text-align: end;
+    padding-right: 1rem;
+    font-weight: 600;
+}
+
+/* =========================== Habilidades ===========================*/
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 95%;
+    background-color: var(--bg2);
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 1rem 0 2rem 0;
+}
+
+.habilidades .hab{
+    background-color: var(--carbon);
+    font-size: 2rem;
+    width: 95%;
+    color: white;
+    margin: 0;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+
+.habilidades .hiddenHab{
+    background-color: var(--calabaza);
+    border-radius: 1.5rem;
+}
+
+.habilidades .hab p{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/* =========================== Moves ===========================*/
+
+.movimientos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    background-color: var(--bg2);
+}
+
+.movimientos #moveList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.movimientos #moveList .move{
+    background-color: var(--carbon);
+    width: 60%;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.movimientos #moveList .move:active{
+    background-color: var(--rayo);
+    color: black;
+}
+
+.movimientos button{
+    font-size: 2rem;
+    background-color: var(--bg3);
+    border: none;
+    width: 40%;
+    border-radius: 2rem;
+    padding: 0.5rem 0;
+    margin: 1rem auto;
+}
+
+.movimientos button:active{
+    background-color: var(--calabaza);
+    color: white;
+}

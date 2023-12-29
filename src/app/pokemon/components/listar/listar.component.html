@@ -2,8 +2,8 @@
 <section class="listaPokemons">
   <div class="cartaPokemon" *ngFor="let item of listaPokemons">
     <img
-      *ngIf="item?.sprites?.front_default"
-      src="{{ item.sprites.front_default }}"
+      *ngIf="item?.sprites?.other?.home?.front_default"
+      src="{{ item.sprites.other?.home?.front_default }}"
       alt=""
       (click)="redirectToPokemon(item.name)"
     />
