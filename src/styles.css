@@ -43,6 +43,8 @@
       --rayo: #FCCA46;
       --celeste: #BCF4F5;
       --menta: #B4EBCA;
+      --coral: #FE8D85;
+
 
       --shadow-color: 0deg 0% 58%;
       --shadow-elevation-low:
@@ -73,7 +75,7 @@
 
   .dragon {
       background-color: var(--dragon);
-      color: var(--fire);
+      color: white;
   }
 
   .fairy {

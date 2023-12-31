@@ -14,6 +14,34 @@
       </p>
     </div>
 
+    <div class="damageRelation">
+      <h2></h2>
+      <div class="weak" *ngIf="weakness.size !== 0">
+        <h3>WEAK TO: </h3>
+        <div class="typeRelation">
+          <span *ngFor="let entry of weakness | keyvalue" [ngClass]="entry.key">
+            {{entry.key.toUpperCase()}} x {{entry.value}}
+            </span>
+        </div>
+      </div>
+      <div class="resist" *ngIf="endurance.size !== 0">
+        <h3>RESIST TO:</h3>
+        <div class="typeRelation resist">
+          <span *ngFor="let entry of endurance | keyvalue" [ngClass]="entry.key">
+          {{entry.key.toUpperCase()}} x {{entry.value}}
+          </span>
+        </div>
+      </div>
+      <div class="inmune" *ngIf="inmunity.size !== 0">
+        <h3>INMUNE TO:</h3>
+        <div class="typeRelation inmunity">
+          <span *ngFor="let entry of inmunity | keyvalue" [ngClass]="entry.key">
+          {{entry.key.toUpperCase()}} x {{entry.value}}
+          </span>
+        </div>
+      </div>
+    </div>
+
     <div class="estadisticas">
       <h2>BASE STATS</h2>
       <div *ngFor="let item of pokemon.stats">
@@ -41,6 +69,7 @@
         </p>
       </div>
     </div>
+
 
     <div class="movimientos">
       <h2>MOVES</h2>

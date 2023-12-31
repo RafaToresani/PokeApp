@@ -14,10 +14,7 @@ export class PokemonService {
 
   baseUrl:string = environments.baseUrl;
   
-  
-
   constructor(private http: HttpClient, private route: Router) {
-
   }
 
   //Busca y retorna un pokemon específico.
@@ -49,13 +46,4 @@ export class PokemonService {
       )
   }
 
-
-  getPokemonSpecie(url:string): Observable<IEspecie | any>{
-    return this.http.get(url);
-  }
-
-  getPokemonEvolutionChain(url:string): Observable<IEvolutionChain | any>{
-    return this.http.get(url);
-  }
-  
 }
